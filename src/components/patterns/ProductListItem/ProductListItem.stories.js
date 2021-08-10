@@ -4,7 +4,7 @@ import { text, withKnobs } from '@storybook/addon-knobs';
 import ProductListItem from './ProductListItem';
 
 export default {
-  title: 'ProductListItem',
+  title: 'patterns/ProductListItem',
   decorator: [withKnobs],
 };
 

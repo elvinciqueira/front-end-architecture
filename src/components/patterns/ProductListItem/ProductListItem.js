@@ -1,5 +1,9 @@
 import React from 'react';
 import './ProductListItem.css';
+import Heading from '../../atoms/Heading';
+import Button from '../../atoms/Button';
+import Text from '../../atoms/Text';
+import Card from '../../atoms/Card';
 
 export default function ProductListItem({
   name,
@@ -10,18 +14,17 @@ export default function ProductListItem({
   isOnSale,
 }) {
   const buttonText = isSoldOut ? 'Sold Out' : 'Add to Cart';
-  const cardClassName = isOnSale ? 'card sale' : 'card';
 
   return (
-    <div className={cardClassName}>
-      <h2>
+    <Card highlight={isOnSale}>
+      <Heading>
         {name} {isOnSale && '(On Sale)'}
-      </h2>
+      </Heading>
       <img src={imageUrl} alt={name} />
-      <small>{price}</small>
-      <button onClick={onAddToCart} disabled={isSoldOut}>
+      <Text>{price}</Text>
+      <Button onClick={onAddToCart} disabled={isSoldOut}>
         {buttonText}
-      </button>
-    </div>
+      </Button>
+    </Card>
   );
 }
