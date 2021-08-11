@@ -1,4 +1,5 @@
 import React from 'react';
+import './Card.css';
 
 export default function Card({ children, highlight }) {
   const cardClassName = highlight ? 'card sale' : 'card';
