@@ -28,10 +28,10 @@ const data = [
   },
 ];
 
-export const loading = () => <ProductList status={statusTypes.loading} />;
+export const Loading = () => <ProductList status={statusTypes.loading} />;
 
-export const error = () => <ProductList status={statusTypes.errored} />;
+export const Error = () => <ProductList status={statusTypes.errored} />;
 
-export const standard = () => (
+export const Standard = () => (
   <ProductList data={data} status={statusTypes.loaded} />
 );

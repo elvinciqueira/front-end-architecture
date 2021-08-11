@@ -29,3 +29,7 @@ export default function ProductList({ data, status, onAddToCart }) {
     />
   ));
 }
+
+ProductList.defaultProps = {
+  status: statusTypes.loading,
+};
